@@ -1,5 +1,32 @@
  1reference
- @rootAPI= http://localhost:8003
+ @rootApi= http://localhost:8003
+
+
+ @userApi= {{rootApi}}/api/v1/user
+
 
 ### server testing
-Get http://localhost:8003
+GET http://localhost:8003
+
+
+
+###  Get user api
+GET {{userApi}}
+Content-Type: application/json
+
+{"role":"admin"
+   , "fname":"kiran",
+    "lname":"manandhar",
+    "phone":"0449967997",
+    "address":"auburn sdyeny",
+    "email":"manandharkiran90@gmail.com",
+    "password":"12345568"
+}
+
+
+###  Post  user api
+GET {{userApi}}
+Content-Type: application/json
+
+
+### Book api
