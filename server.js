@@ -1,5 +1,7 @@
 import dotenv from "dotenv";
 import morgan from "morgan";
+import cors from "cors";
+
 dotenv.config();
 
 import express from "express";
@@ -14,20 +16,13 @@ connectMongoDB();
 
 app.use(morgan("dev"));
 app.use(express.json());
-
+app.use(cors());
 //apis
 
 import userRouter from "./src/routers/userRouter.js";
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/user", (req, res) => {
-  res.json({
-    status: "success",
-    message: "sever running well",
-  });
-});
-
-app.use("/", (req, res) => {
   res.json({
     status: "success",
     message: "sever running well",

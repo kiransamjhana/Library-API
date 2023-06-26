@@ -1,5 +1,5 @@
-import UserSchema from "../models/user/UserSchema";
+import UserSchema from "./UserSchema.js";
 
-const insetUser = (userObj) => {
+export const insertUser = (userObj) => {
   return UserSchema(userObj).save();
 };

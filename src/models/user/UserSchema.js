@@ -6,11 +6,11 @@ const userSchema = new mongoose.Schema({
     requred: true,
     default: "student",
   },
-  Fname: {
+  fname: {
     type: String,
     requred: true,
   },
-  Lname: {
+  fname: {
     type: String,
     requred: true,
   },
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     requred: true,
   },
-  adress: {
+  address: {
     type: String,
     requred: true,
   },
