@@ -1,4 +1,5 @@
 import express from "express";
+import { addBook } from "../models/books/booksModel.js";
 const router = express.Router();
 router.post("/", async (req, res) => {
   try {
@@ -24,7 +25,18 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const books = await getBooks();
-  } catch (error) {}
+
+    res.json({
+      status: "success",
+      message: "Book list",
+      books,
+    });
+  } catch (error) {
+    res.json({
+      status: "error",
+      message: error.message,
+    });
+  }
 });
 
 export default router;

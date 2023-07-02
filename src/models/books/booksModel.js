@@ -1,9 +1,9 @@
 import BookSchema from "./BookSchema.js";
 
 export const addBook = (Obj) => {
-  return UserSchema(userObj).save();
+  return BookSchema(Obj).save();
 };
 
 export const getBooks = () => {
-  return UserSchema.findOne();
+  return BookSchema.findOne();
 };
