@@ -20,8 +20,10 @@ app.use(cors());
 //apis
 
 import userRouter from "./src/routers/userRouter.js";
+import bookRouter from "./src/routers/bookRouter.js";
 
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/book", bookRouter);
 app.use("/api/v1/user", (req, res) => {
   res.json({
     status: "success",
