@@ -3,29 +3,36 @@ import mongoose from "mongoose";
 const burrowSchema = new mongoose.Schema({
   bookId: {
     type: mongoose.Types.ObjectId,
-    requred: true,
-    default: "inactive",
+    required: true,
   },
   bookName: {
     type: String,
-    requred: true,
+    required: true,
   },
   thumbnail: {
     type: String,
-    requred: true,
+    required: true,
   },
   userId: {
     type: mongoose.Types.ObjectId,
-    requred: true,
+    required: true,
   },
   userName: {
     type: String,
-    requred: true,
+    required: true,
   },
-
-  summary: {
-    type: String,
-    requred: true,
+  dueDate: {
+    type: Date,
+    required: true,
+  },
+  isRetured: {
+    type: Boolean,
+    default: false,
+  },
+  returnDate: {
+    type: Date,
+    default: null,
   },
 });
-export default mongoose.model("Burrow", burrowSchema); //Books table
+
+export default mongoose.model("Burrow", burrowSchema); //burrows

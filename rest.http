@@ -4,6 +4,8 @@
 
  @userApi= {{rootApi}}/api/v1/user
 
+ @bookApi={{rootApi}}/api/v1/book
+
 
 ### server testing
 GET http://localhost:8003
@@ -30,3 +32,13 @@ Content-Type: application/json
 
 
 ### Book api
+POST {{bookApi}}
+Content-Type: application/json
+
+{"title":"admin"
+   , "summary":"kiran",
+    "author":"manandhar",
+    "name":"0449967997",
+
+}
+### Create new burrow record

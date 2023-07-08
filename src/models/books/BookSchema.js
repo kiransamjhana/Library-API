@@ -4,6 +4,7 @@ const bookSchema = new mongoose.Schema({
   status: {
     type: String,
     requred: true,
+    default: "inactive",
   },
   title: {
     type: String,
@@ -27,4 +28,4 @@ const bookSchema = new mongoose.Schema({
     requred: true,
   },
 });
-export default mongoose.model("Books", bookSchema); //Books table
+export default mongoose.model("Book", bookSchema); //Books table
