@@ -3,29 +3,41 @@ import mongoose from "mongoose";
 const bookSchema = new mongoose.Schema({
   status: {
     type: String,
-    requred: true,
+    required: true,
     default: "inactive",
   },
   title: {
     type: String,
-    requred: true,
+    required: true,
   },
   author: {
     type: String,
-    requred: true,
+    required: true,
   },
   year: {
     type: Number,
-    requred: true,
+    required: true,
   },
   thumbnail: {
     type: String,
-    requred: true,
+    required: true,
   },
-
   summary: {
     type: String,
-    requred: true,
+    required: true,
+  },
+  isAvailable: {
+    type: Boolean,
+    default: true,
+  },
+  dueDate: {
+    type: Date,
+    default: null,
+  },
+  returnDate: {
+    type: Date,
+    default: null,
   },
 });
+
 export default mongoose.model("Book", bookSchema); //Books table

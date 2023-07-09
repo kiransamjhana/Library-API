@@ -1,7 +1,11 @@
 import express from "express";
 
 import { updateBooks } from "../models/books/booksModel.js";
-import { addBurrow } from "../models/burrow/BurrowModel.js";
+import {
+  addBurrow,
+  getBurrowbyUserId,
+  getBurrows,
+} from "../models/burrow/BurrowModel.js";
 
 const router = express.Router();
 
@@ -34,6 +38,26 @@ router.post("/", async (req, res) => {
     res.json({
       status: "error",
       message: "unable to burrow the book now, Please try gain later",
+    });
+  } catch (error) {
+    res.json({
+      status: "error",
+      message: error.message,
+    });
+  }
+});
+
+router.get("/", async (req, res) => {
+  try {
+    const { role, _id } = req.userInfo;
+
+    const burrowHistory =
+      role === "admin" ? await getBurrows() : await getBurrowbyUserId(_id);
+
+    res.json({
+      status: "success",
+      message: "burrow list",
+      burrowHistory,
     });
   } catch (error) {
     res.json({

@@ -32,6 +32,13 @@ Content-Type: application/json
 
 
 ### Book api
+
+### fetch all the book
+GET {{bookApi}}
+Content-Type: application/json
+
+
+
 POST {{bookApi}}
 Content-Type: application/json
 
