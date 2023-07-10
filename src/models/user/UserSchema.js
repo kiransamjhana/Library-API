@@ -26,13 +26,13 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     requred: true,
+    unique: true,
+    index: 1,
   },
 
   password: {
     type: String,
     requred: true,
-    unique: true,
-    index: 1,
   },
 });
 export default mongoose.model("User", userSchema); //user table

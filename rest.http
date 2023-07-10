@@ -35,7 +35,7 @@ Content-Type: application/json
 
 ### fetch all the book
 GET {{bookApi}}
-Content-Type: application/json
+Authorization: 
 
 
 

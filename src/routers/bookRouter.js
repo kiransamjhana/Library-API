@@ -9,8 +9,8 @@ import { adminAuth, auth } from "../utils/middleware/authMiddleware.js";
 const router = express.Router();
 router.post("/", auth, adminAuth, async (req, res) => {
   try {
-    console.log(req.body);
     const result = await addBook(req.body);
+
     result?._id
       ? res.json({
           status: "success",
