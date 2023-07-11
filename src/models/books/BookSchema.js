@@ -10,6 +10,8 @@ const bookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  //dkakakkakka
+  //ddkakakakakakaakakaaaaaaa
   author: {
     type: String,
     required: true,
