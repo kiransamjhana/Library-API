@@ -17,12 +17,12 @@ POST  {{userApi}}
 Content-Type: application/json
 
 {"role":"admin"
-   , "fname":"kiran",
+   , "fname":"kis",
     "lname":"manandhar",
-    "phone":"0449967997",
+    "phone":"0449967995",
     "address":"auburn sdyeny",
     "email":"manandharkiran90@gmail.com",
-    "password":"12345568"
+    "password":"12345568t"
 }
 
 
@@ -38,14 +38,16 @@ GET {{bookApi}}
 Authorization: 
 
 
-
+### 
 POST {{bookApi}}
 Content-Type: application/json
 
-{"title":"admin"
-   , "summary":"kiran",
+{
+    "summary":"kiran",
     "author":"manandhar",
-    "name":"0449967997",
+    "year":"2020",
+    "title": "how to become javapro",
+    "thumnail": "https://m.media-amazon.com/images/I/51wijnc-Y8L.jpg",
 
 }
 ### Create new burrow record

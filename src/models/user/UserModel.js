@@ -9,5 +9,5 @@ export const getUserByEmail = (email) => {
 };
 
 export const getUserById = (_id) => {
-  return UserSchema.findById({ _id });
+  return UserSchema.findById(_id);
 };

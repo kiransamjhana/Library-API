@@ -8,7 +8,7 @@ export const auth = async (req, res, next) => {
     //get the user from database,
 
     const user = await getUserById(authorization);
-
+    console.log(user);
     if (user?._id) {
       //check the role
       user.password = undefined;
