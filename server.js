@@ -23,6 +23,7 @@ app.use(cors());
 import userRouter from "./src/routers/userRouter.js";
 import bookRouter from "./src/routers/bookRouter.js";
 import burrowRouter from "./src/routers/burrowRouter.js";
+import reviewRouter from "./src/routers/reviewRouter.js";
 import { auth } from "./src/utils/middleware/authMiddleware.js";
 
 app.use("/api/v1/user", userRouter);

@@ -7,6 +7,9 @@
  @bookApi={{rootApi}}/api/v1/book
 
 
+  @reviwApi={{rootApi}}/api/v1/review
+
+
 ### server testing
 GET http://localhost:8003
 
@@ -51,3 +54,6 @@ Content-Type: application/json
 
 }
 ### Create new burrow record
+
+### get reviews
+GET {{reviwApi}}

@@ -48,4 +48,4 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Review", bookSchema); //Books table
+export default mongoose.model("Review", reviewSchema); //Books table
